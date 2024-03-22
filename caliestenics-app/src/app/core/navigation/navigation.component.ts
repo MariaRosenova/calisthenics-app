@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faLink} from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-
+  faLink = faLink;
+  faBars = faBars;
 }
