@@ -7,23 +7,31 @@
     box-sizing: border-box;
 }
 
+
+#registen-btn a {
+    border: 1px solid #0C57FB;
+    border-radius: 10px;
+    background-color: #0C57FB;
+    color:white;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+ 
 .navbar a {
     text-decoration: none;
-    color: gray;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
+    color: gray
     
 }
 
 .nav-bar fa-icon {
     font-family: Font Awesome 6 Free;
     font-weight: 700;
-}
-
-.navbar a:hover {
-   color: white;
+    color:white;
 }
 
 .nav-logo {
@@ -34,8 +42,16 @@
     list-style: none;
     display: flex;
     gap: 25px;
-    margin-bottom: 20px;
-    margin: 0;
+    margin-bottom: 5px;
+}
+
+.navbar a:hover {
+    color: white;
+ }
+ 
+
+.navbar .menu {
+    height: 10px;
 }
 
 #toggle,
