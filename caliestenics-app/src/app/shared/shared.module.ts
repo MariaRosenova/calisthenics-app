@@ -10,6 +10,8 @@ import { MainViewComponent } from './main-view/main-view.component';
   ],
   imports: [
     CommonModule,
+  ],
+  exports: [
     MainViewComponent
   ]
 })
