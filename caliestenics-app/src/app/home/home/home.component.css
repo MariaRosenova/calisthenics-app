@@ -1,0 +1,18 @@
+.title {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    top: 27%;
+    left: 32%;
+}
+
+.subtitle {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    top: 34%;
+    left: 38%;
+    font-size: 25px;
+}

@@ -5,6 +5,10 @@
     background-color: #000;
     padding: 0px 50px;
     box-sizing: border-box;
+    position: fixed; /* Change sticky to fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it span the full width of the viewport */
+    
 }
 
 
