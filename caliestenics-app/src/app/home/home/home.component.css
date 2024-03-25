@@ -16,3 +16,41 @@
     left: 38%;
     font-size: 25px;
 }
+
+
+
+.app-img {
+    position: absolute;
+    width: 35vw;
+    height: 80vh;
+    top: 110%;
+    left: 50%;
+    border-radius: 30px;
+    transform: translate(0%, 1%);
+}
+
+.our-app, .app-soon {
+    z-index: 2;
+}
+
+.our-app {
+    font-size: 1.2rem;
+    color: black;
+    position: absolute;
+    top: calc(110% + 17%);
+    left: 10vw;
+    font-weight: 100;
+}
+
+.app-soon {
+    color: black;
+    position: absolute;
+    top: calc(110% + 20%);
+    font-size: 3.2rem;
+    font-weight: 500;
+    left: 10vw;
+    overflow-wrap: break-word;
+    text-align: left;
+    width: 30%;
+    
+}
