@@ -8,6 +8,7 @@
     position: fixed; /* Change sticky to fixed */
     top: 0; /* Position it at the top of the viewport */
     width: 100%; /* Make it span the full width of the viewport */
+    z-index: 10;
     
 }
 
