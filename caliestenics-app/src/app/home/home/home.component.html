@@ -8,25 +8,28 @@
 <div class="app">
     <app-second-view/>
     <img class="app-img" src="../../../assets/app-soon.jpg" alt="app-soon">
-    <p class="our-app">Our App</p>
-    <h3 class="app-soon">
+    <p class="our-app add-subtitle">Our App</p>
+    <h3 class="app-soon add-title">
         From Beginner 
         to Pro 
         is in progress... 
     </h3>
-    <div class="btns">
-        <button class="btn app-store">
-            <a href="">
-                <fa-icon class="font-icon" [icon]="appStore"/>
-                 App Store
-            </a>
+<div class="btns">
+    <button class="btn app-store icon-btn">
+        <a href="">
+            <fa-icon class="font-icon" [icon]="appStore"/>
+             App Store
+        </a>
+    </button>
+    <button class="btn google-play icon-btn">
+        <a href="">
+            <fa-icon class="font-icon" [icon]="googlePlay"/> 
+            Google Play</a>
         </button>
-        <button class="btn google-play">
-            <a href="">
-                <fa-icon class="font-icon" [icon]="googlePlay"/> 
-                Google Play</a>
-            </button>
-    </div> 
-    <app-third-view/>
+</div> 
 </div>
-
+<app-third-view/>
+<img class="how-to-start" src="../../../assets/how-to-start.jpg" alt="app-soon">
+<h3 class="custom-programs add-title">Custom Programs & Technique guides for you</h3>
+<p class="every-level add-subtitle">For every level</p>
+<button class="btn google-play start-training">Start Training</button>

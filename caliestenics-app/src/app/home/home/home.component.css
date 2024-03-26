@@ -18,7 +18,6 @@
 }
 
 
-
 .app-img {
     position: absolute;
     width: 35vw;
@@ -34,25 +33,31 @@
 }
 
 .our-app {
-    font-size: 1.2rem;
-    color: black;
     position: absolute;
     top: calc(110% + 17%);
     left: 10vw;
+    color: black;
+}
+
+.add-subtitle {
+    font-size: 1.2rem;
     font-weight: 100;
 }
 
-.app-soon {
-    color: black;
+.add-title {
+    font-size: 3.2rem;
+    overflow-wrap: break-word;
+    
+}
+
+.app-soon { 
     position: absolute;
     top: calc(110% + 20%);
-    font-size: 3.2rem;
     font-weight: 500;
     left: 10vw;
-    overflow-wrap: break-word;
     text-align: left;
+    color: black;
     width: 30%;
-    
 }
 
 .btn {
@@ -64,11 +69,14 @@
     font-size: 1.1rem;
     vertical-align: middle;
     text-align: center;
+   
+}
+
+.icon-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 
 .btns {
     display: flex;
@@ -110,4 +118,33 @@
 }
 
 
-  
+.how-to-start {
+    position:absolute;
+    top: 210%;
+    left: 10vw;
+    border-radius: 7px;
+}
+
+.custom-programs {
+    position: absolute;
+    top: calc(210% + 20%);
+    right: 10vw;
+    color: white;
+    text-align: left;
+    width: 40%;
+}
+
+.every-level {
+    position: absolute;
+    top: calc(210% + 16%);
+    right: 40.3vw;
+    color: white;
+
+}
+
+.start-training {
+    position: absolute;
+    color: white;
+    top: calc(210% + 45%);
+    right: 27vw;
+}
