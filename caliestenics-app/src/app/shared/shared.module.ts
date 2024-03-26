@@ -17,7 +17,8 @@ import { ButtonComponent } from './button/button.component';
   ],
   exports: [
     MainViewComponent,
-    SecondViewComponent
+    SecondViewComponent,
+    ButtonComponent
   ]
 })
 export class SharedModule { }
