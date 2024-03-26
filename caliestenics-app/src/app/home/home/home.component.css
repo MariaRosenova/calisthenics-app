@@ -61,10 +61,12 @@
     padding: 0.75rem 1rem;
     line-height: 1.5;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     vertical-align: middle;
     text-align: center;
-    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 
@@ -79,4 +81,33 @@
 
 .btn a {
     text-decoration: none;
+    color: white;
 }
+
+.font-icon{
+   color:white;
+}
+
+.google-play {
+    background-color: #0C57FB;
+    border:#0C57FB;
+}
+
+.google-play:hover {
+    background-color: #0847d9;
+    border:#0847d9;
+}
+
+.app-store {
+    background-color: black;
+    border: black;
+    color: white;
+}
+
+.app-store:hover {
+    background-color:#2C2C2C;
+    border: #2C2C2C;
+}
+
+
+  
