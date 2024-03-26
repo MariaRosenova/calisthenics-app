@@ -1,0 +1,8 @@
+.footer {
+    position: absolute;
+    top: 298%;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+
+}
