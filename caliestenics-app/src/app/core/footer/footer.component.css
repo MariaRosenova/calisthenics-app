@@ -4,5 +4,19 @@
     z-index: -1;
     width: 100%;
     object-fit: cover;
+}
 
+/* .contacts {
+    display: absolute;
+    top: calc(298% + 100px);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+} */
+
+.company, .social, .get-the-app {
+    display: flex;
+    flex-direction: column;
 }
