@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { TrainingComponent } from './training/training.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
+import { WorkoutComponent } from './workout/workout.component';
 
 
 
 @NgModule({
   declarations: [
-    TrainingComponent
+    TrainingComponent,
+    WorkoutComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { CoreModule } from '../core/core.module';
     CoreModule
   ],
   exports: [
-    TrainingComponent
+    TrainingComponent,
+    WorkoutComponent,
   ]
 })
 export class TrainingModule { }
