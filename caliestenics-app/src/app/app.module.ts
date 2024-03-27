@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { TrainingModule } from './training/training.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HomeModule } from './home/home.module';
     UserModule,
     SharedModule,
     HomeModule,
+    TrainingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
