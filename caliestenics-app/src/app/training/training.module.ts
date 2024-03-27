@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrainingComponent } from './training/training.component';
+import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -9,7 +11,9 @@ import { TrainingComponent } from './training/training.component';
     TrainingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    CoreModule
   ],
   exports: [
     TrainingComponent
