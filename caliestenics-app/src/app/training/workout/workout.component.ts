@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Card } from 'src/app/types/card';
+
 
 @Component({
   selector: 'app-workout',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./workout.component.css']
 })
 export class WorkoutComponent {
-
-}
+    @Input('card') card = {} as Card; 
+  }
