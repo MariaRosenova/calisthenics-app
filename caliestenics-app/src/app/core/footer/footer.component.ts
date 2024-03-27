@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import {} from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
    yearNow: number = new Date().getFullYear(); 
+
+   appStore = faApple;
+   googlePlay = faGooglePlay;
 }

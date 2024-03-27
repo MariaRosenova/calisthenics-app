@@ -2,7 +2,7 @@
 <div class="contacts">
 <div class="company">
     <h6 class="company-title footer-title">Company</h6>
-    <ul>
+    <ul class="li-type">
         <li><a>Contact us</a></li>
         <li><a>Shop</a></li>
         <li><a>Blog</a></li>
@@ -10,7 +10,7 @@
 </div>
 <div class="social">
     <h6 class="social-title footer-title">Social</h6>
-    <ul>
+    <ul class="li-type">
         <li><a>YouTube</a></li>
         <li><a>Instagram</a></li>
         <li><a>Facebook</a></li>
@@ -19,11 +19,13 @@
 </div>
 <div class="get-the-app">
     <h6 class="get-title footer-title">Get the app</h6>
-    <ul>
-        <li><a>App store</a></li>
-        <li><a>Google play</a></li>
+    <ul class="li-type">
+        <li class="app-store"><a><fa-icon class="font-icon" [icon]="appStore"/>  App store</a></li>
+        <li class="store"><a><fa-icon class="font-icon" [icon]="googlePlay"/> Google play</a></li>
     </ul>
 </div>
 </div>
-<hr class="line-copyright">
-<p class="copyright">Copyright © BuildByBarz {{yearNow}}</p>
+<div class="copyright-footer">
+    <hr class="line-copyright">
+    <p class="copyright">Copyright © BuildByBarz {{yearNow}}</p>
+</div>
