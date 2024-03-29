@@ -9,7 +9,7 @@ const port = 3000;
 
 app.use(routes);
 
-mongoose.connect(`mongodb://localhost:27017/calistenics-app`)
+mongoose.connect(`mongodb://127.0.0.1:27017/calisthenics-app`)
     .then(() => {
         console.log('DB is connected');
         app.listen(port, () => {console.log(`The app is running on port ${port}`)});
