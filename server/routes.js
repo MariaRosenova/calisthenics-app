@@ -1,7 +1,10 @@
 const router = require('express').Router();
 const trainingController = require('./controllers/trainingController');
+const ownerController = require('./controllers/ownerController');
 
 router.use(trainingController);
+
+router.use(ownerController);
 
 router.use('*', (req, res) => {
     res.status(404)
