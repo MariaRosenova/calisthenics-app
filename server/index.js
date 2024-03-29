@@ -1,9 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const routes = require('./routes');
 
 
 const app = express();
 const port = 3000;
+
+
+app.use(routes);
 
 mongoose.connect(`mongodb://localhost:27017/calistenics-app`)
     .then(() => {
