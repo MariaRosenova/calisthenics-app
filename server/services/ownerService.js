@@ -7,3 +7,9 @@ exports.addExercise = async (exercise) => {
 
     return createdExersice;
 }
+
+
+exports.createWorkout = async (workout) => {
+    const createdWorkout = await Workout.create({workout : workout});
+    return createdWorkout;
+}
