@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProgramItem } from 'src/app/types/programItem';
 
 @Component({
   selector: 'app-program',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./program.component.css']
 })
 export class ProgramComponent {
-
+  @Input('program') program = {} as ProgramItem;
 }

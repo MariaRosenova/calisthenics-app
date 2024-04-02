@@ -4,4 +4,8 @@
 
 
 <h1 class="personal-title ">Your personal programs</h1>
-<app-program />
+<div class="programs">
+    <ul *ngFor="let program of programs">
+        <app-program [program] = "program"/>
+    </ul>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProgramItem } from '../../types/programItem';
 
 @Component({
   selector: 'app-training',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent {
+
+
+    programs: ProgramItem[] = [
+    { title: 'Build strength' },
+    { description: 'The best shape in your life' },
+    { imgUrl: '../../../assets/workout-comp.jpg' }
+];
 
 }
