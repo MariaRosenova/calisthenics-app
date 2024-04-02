@@ -2,10 +2,18 @@
 <h1 class="title">Workouts & Programs</h1>
 <p class="subtitle">Workouts, Programs and Technique Guides that just work</p>
 
-
 <h1 class="personal-title ">Your personal programs</h1>
+
 <div class="programs">
     <ul *ngFor="let program of programs">
-        <app-program [program] = "program"/>
+        <app-program class="program-component" [program] = "program"/>
     </ul>
 </div>
+
+<h1 class="tech-title">Technique Guides</h1>
+<div class="guides">
+    <ul *ngFor="let program of programs">
+        <app-program class="guide-program" [program] = "program"/>
+    </ul>
+</div>
+

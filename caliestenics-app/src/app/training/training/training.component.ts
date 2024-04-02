@@ -8,7 +8,6 @@ import { ProgramItem } from '../../types/programItem';
 })
 export class TrainingComponent {
 
-
     programs: ProgramItem[] = [
     { title: 'Build strength' },
     { description: 'The best shape in your life' },
