@@ -1,0 +1,35 @@
+
+.program img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+    z-index: 1;
+}
+
+.program {
+    position: relative;
+    width: 20vw;
+    height: 20vh;
+}
+
+.title {
+    z-index: 2;
+    top: 13.4vh;
+    left: 1vw;
+    position: absolute;
+    color: white;
+    font-size: medium;
+}
+
+.description {
+    z-index: 2;
+    top: 16vh;
+    left: 1vw;
+    position: absolute;
+    color: #dddddd;
+    font-size: 0.6em;
+    width: 15vw;
+  
+}
+}
