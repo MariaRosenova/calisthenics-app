@@ -19,3 +19,14 @@
     line-height: 1.5;
     font-weight: 100;
 }
+
+.personal-title {
+    position: absolute;
+    top: 110%;
+    left: 32%;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 100;
+    color: black;
+    z-index: 1;
+}
