@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Card } from 'src/app/types/card';
-
 
 @Component({
   selector: 'app-training',
@@ -8,13 +6,5 @@ import { Card } from 'src/app/types/card';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent {
-  // workoutData: Card[] = [
-  //   {
-  //     title: 'Strenght Building',
-  //     image: '../../../assets/workout-comp.jpg',
-  //     level: 'begginer',
-  //     // muscles: ['triceps', 'shoulders', 'back']
-  //   }
-  // ];
 
 }

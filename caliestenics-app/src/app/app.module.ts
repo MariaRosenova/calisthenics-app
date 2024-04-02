@@ -8,6 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
+import { AboutModule } from './about/about.module';
+import { OwnerModule } from './owner/owner.module';
 import { TrainingModule } from './training/training.module';
 
 
@@ -24,7 +26,9 @@ import { TrainingModule } from './training/training.module';
     UserModule,
     SharedModule,
     HomeModule,
-    TrainingModule
+    AboutModule,
+    TrainingModule,
+    OwnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
