@@ -41,8 +41,15 @@
     color: black;
     z-index: 1;
 }
-
-.programs .program-component {
+/* TODO: make flexible the others program views */
+.programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: fit-content;
+}
+ .program-component {
+    flex-grow: 1;
     position: absolute;
     top: 130%;
     left: 20%;
@@ -52,4 +59,36 @@
     position: absolute;
     top: 190%;
     left: 20%;
+}
+
+.workout-libraly{
+    position: absolute;
+    height: 2vh;
+    width: 100%;
+    top:25vh;
+    z-index: -4;
+}
+
+.libraly-title {
+    position: absolute;
+    top: 230%;
+    left: 42%;
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 100;
+    color:white;
+}
+
+.libraly-subtitle {
+    position: absolute;
+    top: 240%;
+    left: 39%;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.libraly-videos{
+    position: absolute;
+    top: 250%;
+    left: 25%;
 }

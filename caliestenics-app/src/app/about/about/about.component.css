@@ -1,0 +1,76 @@
+.about-me {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+.about {
+    position: absolute;
+    top: 20vh;
+    left: 55%;
+    width: 23vw;
+    height: 70vh;
+    border-radius: 3px;
+}
+
+.hello {
+    position: absolute;
+    top:35vh;
+    right: 54%;
+    color: white;
+    width: 31%;
+    line-height: 1.2;
+    font-size: 3.4rem;
+    font-weight: 300;
+}
+
+.description {
+    position: absolute;
+    top:53vh;
+    right: 59%;
+    color: gray;
+    width: 26%;
+    line-height: 1.5;
+    font-weight: 100; /* Thinnest font weight */
+    font-size: 1.1rem;
+}
+
+.why-me {
+    width: 100vw;
+    height: 100vh;
+    position: relative; 
+    background-color: #FFFFFF;
+}
+
+.why-img {
+    position: absolute;
+    top: 20vh;
+    right: 55%;
+    width: 33vw;
+    height: 90vh;
+    border-radius: 5px;
+}
+
+.why-me-title {
+    position: absolute;
+    top:35vh;
+    left: 54%;
+    width: 35%;
+    height: 20%;
+    line-height: 1.2;
+    font-size: 4.5rem;
+    font-weight: 300;
+    text-align: right2;
+}
+
+.decription-why {
+    position: absolute;
+    top:53vh;
+    left: 59%;
+    color: gray;
+    width: 26%;
+    line-height: 1.5;
+    font-weight: 100; /* Thinnest font weight */
+    font-size: 1.1rem;
+}

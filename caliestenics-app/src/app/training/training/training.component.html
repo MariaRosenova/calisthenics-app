@@ -5,15 +5,23 @@
 <h1 class="personal-title ">Your personal programs</h1>
 
 <div class="programs">
-    <ul *ngFor="let program of programs">
-        <app-program class="program-component" [program] = "program"/>
+    <ul class="program-component" *ngFor="let program of programs">
+        <app-program  [program] = "program"/>
     </ul>
 </div>
 
 <h1 class="tech-title">Technique Guides</h1>
 <div class="guides">
-    <ul *ngFor="let program of programs">
-        <app-program class="guide-program" [program] = "program"/>
+    <ul class="guide-program" *ngFor="let program of programs">
+        <app-program  [program] = "program"/>
     </ul>
 </div>
 
+<app-third-view class="workout-libraly"/>
+<h1 class="libraly-title">Workouts</h1>
+<p class="libraly-subtitle">based on your needs and fitness level</p>
+<div class="libraly">
+    <ul class="libraly-videos" *ngFor="let program of programs">
+        <app-program  [program] = "program"/>
+    </ul>
+</div>

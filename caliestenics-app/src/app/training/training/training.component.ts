@@ -14,4 +14,5 @@ export class TrainingComponent {
     { imgUrl: '../../../assets/workout-comp.jpg' }
 ];
 
+
 }
