@@ -13,7 +13,8 @@ import { ProgramComponent } from './program/program.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    
   ],
   exports: [
     TrainingComponent,

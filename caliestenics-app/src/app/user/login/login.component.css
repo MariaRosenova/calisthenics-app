@@ -1,0 +1,69 @@
+.login {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-form {
+    position: absolute;
+    top: 27vh;
+    left: 34%;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 30vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5vh;
+    color: white;
+}
+
+.login-form input {
+    width: 20vw;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 5vw;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.username, .password {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35vh;
+}
+
+.login-form h2 {
+    margin-top: 5vh;
+    font-size: 2em;
+}
+
+.btn {
+    margin-left: 10vw;
+    background-color: #0C57FB;
+    border-color: #0C57FB;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 10vw;
+    font-weight: 400;
+    height: 7vh;
+    font-size: 1.2em;
+}
+
+.view {
+    filter: blur(4px);
+    overflow: hidden;
+    z-index: -5;
+}
+
+.login-form p a{
+    cursor: pointer;
+    color: #0C57FB;
+    text-decoration: none;
+}
