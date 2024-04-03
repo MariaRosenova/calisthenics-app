@@ -1,1 +1,21 @@
-<p>create-exercise works!</p>
+
+<app-main-view class="view"/>
+<div class="register">
+    <form class="create-form">
+      <h2>Create Exercise</h2>
+      
+      <div class="input-fields">
+        <div class="name-exersice">
+            <label for="nameOfexercise">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name of exercise" autocomplete="off" class="name-input" required />
+          </div>
+        <div class="exercise">
+          <label for="exerciseUrl">Exercise URL</label>
+          <input type="text" name="exercise" id="exercise" placeholder="Exercise URL" autocomplete="off" class="exercise-input" required />
+        </div>
+      </div>
+  
+      <button type="submit" class="btn">Create</button>
+    </form>
+  </div>
+  

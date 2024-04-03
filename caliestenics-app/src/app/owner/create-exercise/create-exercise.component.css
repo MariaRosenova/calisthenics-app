@@ -1,0 +1,73 @@
+.register {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.create-form {
+    position: absolute;
+    top: 22vh;
+    left: 34%;
+    background-color: #000000;
+    border-radius: 10px;
+    width: 30vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 4.5vh;
+    color: white;
+}
+
+.create-form input {
+    width: 20vw;
+    padding: 10px;
+    border-radius: 3px;
+    margin-left: 5vw;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.name-exersice, .exercise {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35vh;
+}
+
+.create-form h2 {
+    margin-top: 5vh;
+    font-size: 2em;
+}
+
+.btn {
+    margin-left: 10vw;
+    background-color: #0C57FB;
+    border-color: #0C57FB;
+    border-radius: 5px;
+    color: white;
+    padding: 12px;
+    width: 10vw;
+    font-weight: 400;
+    height: 7vh;
+    font-size: 1.2em;
+}
+
+.view {
+    filter: blur(4px);
+    overflow: hidden;
+    z-index: -5;
+}
+
+.create-form p a{
+    cursor: pointer;
+    color: #0C57FB;
+    text-decoration: none;
+}
+
+.create-form p {
+    margin-bottom: 30vh;
+}
