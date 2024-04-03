@@ -1,1 +1,31 @@
-<p>register works!</p>
+<app-main-view class="view"/>
+<div class="register">
+    <form class="register-form">
+      <h2>Register</h2>
+      
+      <div class="input-fields">
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" class="form-input" required />
+          </div>
+        <div class="username">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" class="form-input" required />
+        </div>
+    
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" class="form-password" required />
+        </div>
+        <div class="repass">
+            <label for="repass">Repeat password</label>
+            <input type="repass" name="repass" id="repass" placeholder="Password" autocomplete="off" class="form-password" required />
+          </div>
+       
+      </div>
+  
+      <button type="submit" class="btn">Register</button>
+      <p>You already have an account? <a routerLink="/login">Login</a></p>
+    </form>
+  </div>
+  
