@@ -45,32 +45,34 @@
 
 .why-img {
     position: absolute;
-    top: 20vh;
+    top: 7vh;
     right: 55%;
-    width: 33vw;
-    height: 90vh;
+    width: 31vw;
+    height: 87vh;
     border-radius: 5px;
 }
 
 .why-me-title {
     position: absolute;
-    top:35vh;
+    top:14vh;
     left: 54%;
-    width: 35%;
+    width: 38%;
     height: 20%;
     line-height: 1.2;
     font-size: 4.5rem;
     font-weight: 300;
-    text-align: right2;
+    text-align: left;
 }
 
 .decription-why {
     position: absolute;
-    top:53vh;
-    left: 59%;
+    top:40vh;
+    left: 54%;
     color: gray;
-    width: 26%;
+    width: 30%;
+    text-align: justify;
     line-height: 1.5;
     font-weight: 100; /* Thinnest font weight */
     font-size: 1.1rem;
 }
+

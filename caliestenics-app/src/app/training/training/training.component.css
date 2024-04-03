@@ -1,9 +1,20 @@
+* {
+    margin:0;
+}
+
+.training {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+
 .title {
     position: absolute;
     z-index: 1;
     color: white;
     font-size: 3rem;
-    top: 27%;
+    top: 27vh;
     left: 35%;
     font-weight: 300;
 }
@@ -13,16 +24,21 @@
     z-index: 1;
     color: white;
     font-size: 50px;
-    top: 34%;
+    top: 34vh;
     left: 31%;
     font-size: 1.4rem;
     line-height: 1.5;
     font-weight: 100;
 }
+.programs {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+}
 
 .personal-title {
     position: absolute;
-    top: 110%;
+    top: 10vh;
     left: 32%;
     font-size: 3rem;
     line-height: 1.5;
@@ -31,9 +47,27 @@
     z-index: 1;
 }
 
+.program-components {
+    position: absolute;
+    width: fit-content;
+    top: 27vh;
+    left: 10%;
+}
+
+/* TODO: make flexible the others program views */
+
+
+
+
+.techniques {
+    position: relative;
+    height: fit-content;
+    width: 100vw;
+}
+
 .tech-title {
     position: absolute;
-    top: 172%;
+    top: 60vh;
     left: 37%;
     font-size: 3rem;
     line-height: 1.5;
@@ -41,37 +75,24 @@
     color: black;
     z-index: 1;
 }
-/* TODO: make flexible the others program views */
-.programs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: fit-content;
-}
- .program-component {
-    flex-grow: 1;
-    position: absolute;
-    top: 130%;
-    left: 20%;
-}
 
 .guides .guide-program {
     position: absolute;
-    top: 190%;
-    left: 20%;
+    top: 78vh;
+    left: 10%;
 }
 
 .workout-libraly{
-    position: absolute;
-    height: 2vh;
-    width: 100%;
-    top:25vh;
+    position: relative;
+    background-color: #000000;
+    height: 70vh;
+    width: 100vw;
     z-index: -4;
 }
 
 .libraly-title {
     position: absolute;
-    top: 230%;
+    top: 5vh;
     left: 42%;
     font-size: 3rem;
     line-height: 1.5;
@@ -81,7 +102,7 @@
 
 .libraly-subtitle {
     position: absolute;
-    top: 240%;
+    top: 15vh;
     left: 39%;
     font-size: 1.1rem;
     color: white;
@@ -89,6 +110,6 @@
 
 .libraly-videos{
     position: absolute;
-    top: 250%;
-    left: 25%;
+    top: 27vh;
+    left: 10%;
 }

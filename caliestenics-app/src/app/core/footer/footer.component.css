@@ -1,6 +1,10 @@
 .footer {
+    position: relative;
+    width: 100vw;
+}
+.footer-img {
     position: absolute;
-    top: 298%;
+    top: 0;
     z-index: -3;
     width: 100%;
     object-fit: cover;
@@ -10,7 +14,7 @@
 .contacts {
     position: absolute;
     z-index: 1;
-    top: 310%;
+    top: 10vh;
     color: white;
     display: flex;
     flex-direction: row;
@@ -68,7 +72,7 @@
 .copyright-footer {
     position: absolute;
     z-index: 1;
-    top: 345%;
+    top: 45vh;
     width: 80%;
     left: 10vw;
     color: #6c757d;
