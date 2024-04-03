@@ -22,7 +22,13 @@ const routes: Routes = [
   },
   {
     path: 'create', component: CreateExerciseComponent
-  }
+  },
+  {
+     path:'login', component: LoginComponent
+  },
+  { 
+    path: 'register', component: RegisterComponent
+  },
 ];
 
 @NgModule({
