@@ -1,22 +1,38 @@
-<app-main-view class="view"/>
+<app-main-view class="view" />
 <div class="login">
-  <form class="login-form">
-    <h2>Login</h2>
-    <div class="input-fields">
-      <div class="username">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" class="form-input" required />
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="login-form">
+    <div class="form-group">
+      <h2>Login</h2>
+      <div class="input-fields">
+        <div class="username">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" class="form-input"
+            ngModel required #username="ngModel"/>
+        </div>
+        <div *ngIf="username.touched">
+          <div *ngIf="password.errors?.['required']" style="color:red">
+            Username is required
+          </div>
+        </div>
+
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off"
+            class="form-password" ngModel required #password="ngModel"/>
+        </div>
+
+        <div *ngIf="password.touched">
+          <div *ngIf="password.errors?.['required']" style="color: red">
+            Password is required
+          </div>
+        </div>
+
       </div>
-  
-      <div class="password">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" class="form-password" required />
-      </div>
-   
+
+      <button class="btn">Login</button>
+      <p>Don't have an account? <a routerLink="/register">Register</a></p>
     </div>
 
-    <button type="submit" class="btn">Login</button>
-    <p>Don't have an account? <a routerLink="/register">Register</a></p>
   </form>
 </div>
 
