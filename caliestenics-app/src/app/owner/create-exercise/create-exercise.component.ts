@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-exercise',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-exercise.component.css']
 })
 export class CreateExerciseComponent {
+  addNewExercise(form: NgForm) {
+    console.log(form.value);
+
+    form.setValue({name: '', exercise: ''});
+  }
+
 
 }

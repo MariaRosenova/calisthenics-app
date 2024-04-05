@@ -1,21 +1,23 @@
-
-<app-main-view class="view"/>
+<app-main-view class="view" />
 <div class="register">
-    <form class="create-form">
+  <form #createForm="ngForm" (ngSubmit)="addNewExercise(createForm)" class="create-form">
+    <div class="form-group">
       <h2>Create Exercise</h2>
-      
+
       <div class="input-fields">
         <div class="name-exersice">
-            <label for="nameOfexercise">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name of exercise" autocomplete="off" class="name-input" required />
-          </div>
+          <label for="nameOfexercise">Name</label>
+          <input type="text" name="name" id="name" placeholder="Exercise Name" class="name-input" ngModel required />
+        </div>
         <div class="exercise">
           <label for="exerciseUrl">Exercise URL</label>
-          <input type="text" name="exercise" id="exercise" placeholder="Exercise URL" autocomplete="off" class="exercise-input" required />
+          <input type="text" name="exercise" id="exercise" placeholder="Video URL" class="exercise-input" ngModel
+            required />
         </div>
       </div>
-  
-      <button type="submit" class="btn">Create</button>
-    </form>
-  </div>
-  
+
+      <button class="btn">Create</button>
+    </div>
+
+  </form>
+</div>
