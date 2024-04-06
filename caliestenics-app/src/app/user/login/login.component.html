@@ -1,39 +1,71 @@
 <app-main-view class="view" />
 <div class="login">
-  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="login-form">
-    <div class="form-group">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <div class="login-form">
       <h2>Login</h2>
-      <div class="input-fields">
-        <div class="username">
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" class="form-input"
-            ngModel required #username="ngModel"/>
-        </div>
-        <div *ngIf="username.touched">
-          <div *ngIf="password.errors?.['required']" style="color:red">
-            Username is required
-          </div>
-        </div>
+        <fieldset>
+          <div class="input-fields">
+            <div class="email">
 
-        <div class="password">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off"
-            class="form-password" ngModel required #password="ngModel"/>
-        </div>
+              <label for="email">email</label>
+    
+              <input 
+              type="text" 
+              name="email" 
+              id="email" 
+              placeholder="email" 
+              class="form-input"
+              ngModel 
+              required 
+              #email="ngModel"
+              [appEmail]="domains"/>
+            </div>
+            
+            <ng-container *ngIf="email.touched">
+              <p *ngIf="email.errors?.['required']" style="color:red">
+                email is required
+              </p>
+              <p class="error" *ngIf="email.errors?.['emailValidator']">
+                Email is not valid
+              </p>
+            </ng-container>
 
-        <div *ngIf="password.touched">
-          <div *ngIf="password.errors?.['required']" style="color: red">
-            Password is required
-          </div>
-        </div>
+            <div class="password">
 
+              <label for="password">Password</label>
+    
+              <input 
+              type="password" 
+              name="password" 
+              id="password" 
+              placeholder="******" 
+              class="form-password" 
+              ngModel 
+              required 
+              #password="ngModel"
+              minlength="6"
+              />
+            </div>
+            </div>
+        
+            <ng-container *ngIf="password.touched">
+              <p class="error" *ngIf="password.errors?.['required']">
+                Password is required!
+              </p>
+              <p class="error" *ngIf="password.errors?.['minlength']">
+                Password must be at least 5 characters!
+              </p>
+            </ng-container>
+      
+        </fieldset>
+        
+        <button class="btn">Login</button>
+        <p>Don't have an account? <a routerLink="/register">Register</a></p>
+  
       </div>
-
-      <button class="btn">Login</button>
-      <p>Don't have an account? <a routerLink="/register">Register</a></p>
-    </div>
-
-  </form>
+</form>
+<p>{{ email.errors?.['required'] | json }}</p>
 </div>
+
 
   

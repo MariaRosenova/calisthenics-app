@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { EmailDirective } from '../validators/email.directive';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    EmailDirective,
   ],
   imports: [
     CommonModule,
