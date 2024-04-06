@@ -1,69 +1,82 @@
 <app-main-view class="view" />
 <div class="register">
-  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+
+  <form class="register" [formGroup]="form" (ngSubmit)="register()">
     <div class="register-form">
       <h2>Register</h2>
       <fieldset>
         <div class="email">
           <label for="email">Email</label>
 
-          <input
-           type="text" 
-           name="email" 
-           id="email" 
-           placeholder="Email" 
-           class="form-input"
-           ngModel  
-           required
-           #email="ngModel"
-           [appEmail]="domains"
-            />
+          <input type="text" name="email" id="email" placeholder="Email" class="form-input" required
+            formControlName="email" />
 
+          <ng-container *ngIf="form.get('email')?.touched">
+            <h6 class="error" *ngIf="form.get('email')?.errors?.['required']">
+              Email is required!
+            </h6>
+            <h6 class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+              Email is not valid!
+            </h6>
+          </ng-container>
         </div>
+
         <div class="username">
           <label for="username">Username</label>
-          <input 
+          <input type="text" name="username" id="username" placeholder="Username" class="form-input"
+            formControlName="username" />
 
-          type="text" 
-          name="username" 
-          id="username" 
-          placeholder="Username" 
-          ngModel
-          class="form-input"
-          required
-          #username="ngModel" />
+
+          <ng-container *ngIf="form.get('username')?.touched">
+            <h6 class="error" *ngIf="form.get('username')?.errors?.['required']">
+              Username is required!
+            </h6>
+
+            <h6 class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+              Username must be at least 5 characters!
+            </h6>
+          </ng-container>
         </div>
-  
-        <div class="password">
-          <label for="password">Password</label>
-          <input 
-          type="password" 
-          name="password" 
-          id="password" 
-          placeholder="Password" 
-          ngModel
-          class="form-password" 
-          required 
-          #password="ngModel"/>
-        </div>
-  
-        <div class="repass">
-          <label for="repass">Repeat password</label>
-          <input 
-          type="repass" 
-          name="repass" 
-          id="repass" 
-          placeholder="Password" 
-          ngModel
-          class="form-password"
-          required
-          #password="ngModel" />
-        </div>
+
+
+        <ng-container formGroupName="passGroup">
+          <div class="password">
+            <label for="password">Password</label>
+
+            <input type="password" name="password" id="password" placeholder="******" class="form-password"
+              formControlName="password" />
+          </div>
+
+
+          <div class="repass">
+            <label for="repass">Repeat password</label>
+            <input type="password" name="repass" id="repass" placeholder="******" class="form-password"
+              formControlName="rePassword" />
+          </div>
+
+
+          <ng-container *ngIf="form.get('passGroup')?.get('rePassword')?.touched">
+            <h6 class="error" *ngIf="form.get('passGroup')?.errors?.['matchPasswordsValidator'] || 
+              form.get('passGroup')?.get('rePassword')?.errors?.['required']">Repeat Password does
+              not
+              match password!</h6>
+
+          </ng-container>
+        </ng-container>
       </fieldset>
-      
-      <button type="submit" class="btn">Register</button>
+
+      <button 
+        [disabled]="form.invalid" 
+        [style]="{ 
+          backgroundColor: form.invalid ? 'lightgray' : '#0C57FB', 
+          border: form.invalid ? '1px solid lightgray' : 'none', 
+          cursor: form.invalid ? 'not-allowed' : 'pointer' 
+        }" 
+        type="submit" 
+        class="btn">Register</button>
+
       <p>You already have an account? <a routerLink="/login">Login</a></p>
-  
+
     </div>
   </form>
 </div>

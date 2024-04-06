@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { EMAIL_DOMAINS } from 'src/app/constants';
+import { emailValidator } from 'src/app/shared/utils/email-validator';
+import { matchPasswordsValidator } from 'src/app/shared/utils/matchPasswordsValidator';
 
 @Component({
   selector: 'app-register',
@@ -8,13 +10,30 @@ import { EMAIL_DOMAINS } from 'src/app/constants';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  domains = EMAIL_DOMAINS;
+  form = this.fb.group({
+    email: ['', [Validators.required, emailValidator(EMAIL_DOMAINS)]],
+    username: ['', [Validators.required, Validators.minLength(6)]],
+    passGroup: this.fb.group(
+      {
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      rePassword: ['', [Validators.required]]
+      },
+      {
+        validators : [matchPasswordsValidator('password', 'rePassword')],
+      }
+  )
+  });
+  get passGroup() {
+    return this.form.get('passGroup');
+  }
 
-  register(form: NgForm) {
-    if(form.invalid) {
+  constructor(private fb: FormBuilder) {}
+
+  register(): void {
+    if (this.form.invalid) {
       return;
     }
-    console.log(form.value);
-    console.log('successful registered user')
-  }
+
+    console.log(this.form.value);
+}
 }
