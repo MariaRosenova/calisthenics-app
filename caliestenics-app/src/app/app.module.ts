@@ -11,12 +11,14 @@ import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { OwnerModule } from './owner/owner.module';
 import { TrainingModule } from './training/training.module';
+import { FormsModule } from '@angular/forms';
+import { EmailDirective } from './validators/email.directive';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { TrainingModule } from './training/training.module';
     HomeModule,
     AboutModule,
     TrainingModule,
-    OwnerModule
+    OwnerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
