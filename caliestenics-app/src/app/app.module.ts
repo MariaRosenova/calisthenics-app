@@ -12,7 +12,8 @@ import { AboutModule } from './about/about.module';
 import { OwnerModule } from './owner/owner.module';
 import { TrainingModule } from './training/training.module';
 import { FormsModule } from '@angular/forms';
-import { EmailDirective } from './validators/email.directive';
+// import { EmailDirective } from './validators/email.directive';
+import { AppInterceptor } from './app.interceptor';
 
 
 
@@ -33,7 +34,7 @@ import { EmailDirective } from './validators/email.directive';
     OwnerModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AppInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
