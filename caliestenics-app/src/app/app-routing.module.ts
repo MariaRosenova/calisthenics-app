@@ -7,6 +7,7 @@ import { TrainingComponent } from './training/training/training.component';
 import { AboutComponent } from './about/about/about.component';
 import { CreateExerciseComponent } from './owner/create-exercise/create-exercise.component';
 
+
 const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: '/home'
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     path: 'create', component: CreateExerciseComponent
-  }
+  },
 ];
 
 @NgModule({
