@@ -1,31 +1,69 @@
-<app-main-view class="view"/>
+<app-main-view class="view" />
 <div class="register">
-    <form class="register-form">
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <div class="register-form">
       <h2>Register</h2>
-      
-      <div class="input-fields">
+      <fieldset>
         <div class="email">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" class="form-input" required />
-          </div>
+          <label for="email">Email</label>
+
+          <input
+           type="text" 
+           name="email" 
+           id="email" 
+           placeholder="Email" 
+           class="form-input"
+           ngModel  
+           required
+           #email="ngModel"
+           [appEmail]="domains"
+            />
+
+        </div>
         <div class="username">
           <label for="username">Username</label>
-          <input type="text" name="username" id="username" placeholder="Username" autocomplete="off" class="form-input" required />
+          <input 
+
+          type="text" 
+          name="username" 
+          id="username" 
+          placeholder="Username" 
+          ngModel
+          class="form-input"
+          required
+          #username="ngModel" />
         </div>
-    
+  
         <div class="password">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" class="form-password" required />
+          <input 
+          type="password" 
+          name="password" 
+          id="password" 
+          placeholder="Password" 
+          ngModel
+          class="form-password" 
+          required 
+          #password="ngModel"/>
         </div>
-        <div class="repass">
-            <label for="repass">Repeat password</label>
-            <input type="repass" name="repass" id="repass" placeholder="Password" autocomplete="off" class="form-password" required />
-          </div>
-       
-      </div>
   
+        <div class="repass">
+          <label for="repass">Repeat password</label>
+          <input 
+          type="repass" 
+          name="repass" 
+          id="repass" 
+          placeholder="Password" 
+          ngModel
+          class="form-password"
+          required
+          #password="ngModel" />
+        </div>
+      </fieldset>
+      
       <button type="submit" class="btn">Register</button>
       <p>You already have an account? <a routerLink="/login">Login</a></p>
-    </form>
-  </div>
   
+    </div>
+  </form>
+</div>
