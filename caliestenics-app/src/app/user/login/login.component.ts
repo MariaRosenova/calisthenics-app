@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EMAIL_DOMAINS } from 'src/app/constants';
-import { emailValidator } from 'src/app/shared/utils/email-validator';
+//import { emailValidator } from 'src/app/shared/utils/email-validator';
 
 
 @Component({
