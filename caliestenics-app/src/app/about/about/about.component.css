@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-color: #000000;
+    background-color: #1a1a1a;
 }
 
 .about {
@@ -40,7 +40,7 @@
     width: 100vw;
     height: 100vh;
     position: relative; 
-    background-color: #FFFFFF;
+    background-color: #fafafa ;
 }
 
 .why-img {

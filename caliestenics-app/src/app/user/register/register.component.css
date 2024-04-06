@@ -6,16 +6,17 @@
 
 .register-form {
     position: absolute;
-    top: 25vh;
+    top: 15vh;
     left: 34%;
-    background-color: #000000;
+    background-color: #1a1a1a;
     border-radius: 10px;
     width: 30vw;
-    height: 73vh;
+    height: fit-content;
+    max-height: 82vh;
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 4.5vh;
+    gap: 4.2vh;
     color: white;
 }
 
@@ -26,7 +27,7 @@
     margin-left: 5vw;
 }
 
-.input-fields {
+fieldset {
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -42,7 +43,7 @@
     margin-top: 5vh;
     font-size: 2em;
 }
-
+/* TODO: FIX btn to be part of fieldset */
 .btn {
     margin-left: 10vw;
     background-color: #0C57FB;
@@ -70,4 +71,18 @@
 
 .register-form p {
     margin-bottom: 30vh;
+}
+
+
+h6.error {
+    text-align: center;
+    border-radius: 0.1em;
+    color: red;
+    padding-top: 0;
+    margin: 0; /* Add this line to remove default margin */
+    height: 0.5em;
+}
+
+.input-error { /* Optional: Style to apply to input when there's an error */
+    border-left-color: red;
 }

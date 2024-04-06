@@ -3,12 +3,12 @@
     width: 100vw;
     height: 100vh;
 }
-
+/* TODO: FIX THE FLEXIBILITY OF THE LOGIN-FORM */
 .login-form {
     position: absolute;
-    top: 27vh;
+    top: 25vh;
     left: 34%;
-    background-color: #000000;
+    background-color: #1a1a1a;
     border-radius: 10px;
     width: 30vw;
     height: 55vh;
@@ -32,7 +32,7 @@
     gap: 3vh;
 }
 
-.username, .password {
+.email, .password {
     display: flex;
     flex-direction: column;
     gap: 1.35vh;
