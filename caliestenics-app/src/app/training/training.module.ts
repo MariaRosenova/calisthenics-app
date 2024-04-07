@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { TrainingComponent } from './training/training.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProgramComponent } from './program/program.component';
+import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
 
 
 
 @NgModule({
   declarations: [
     TrainingComponent,
-    ProgramComponent
+    ProgramComponent,
+    WorkoutDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { ProgramComponent } from './program/program.component';
   ],
   exports: [
     TrainingComponent,
-    ProgramComponent
+    ProgramComponent,
+    WorkoutDetailsComponent
   ]
 })
 export class TrainingModule { }
