@@ -14,18 +14,22 @@ import { TrainingModule } from './training/training.module';
 import { FormsModule } from '@angular/forms';
 // import { EmailDirective } from './validators/email.directive';
 import { AppInterceptor } from './app.interceptor';
+import { ErrorComponent } from './error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     FontAwesomeModule,
+    HttpClientModule,
     UserModule,
     SharedModule,
     HomeModule,
