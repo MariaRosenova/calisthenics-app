@@ -64,6 +64,12 @@
     display: none;
 }
 
+/* TODO: FIX PROFILE BUTTON*/
+.profile {
+    width: 5vw;
+    height: 5vh;
+}
+
 
 @media screen and (max-width: 600px) {
     .menu {
@@ -92,7 +98,5 @@
     #toggle:checked ~ .menu {
         max-height: 100%;
     }
-
-
     
 }
