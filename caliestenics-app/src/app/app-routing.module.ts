@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home/home.component';
 import { TrainingComponent } from './training/training/training.component';
 import { AboutComponent } from './about/about/about.component';
 import { CreateExerciseComponent } from './owner/create-exercise/create-exercise.component';
+import { WorkoutDetailsComponent } from './training/workout-details/workout-details.component';
+import { ErrorComponent } from './error/error.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,16 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'training', component: TrainingComponent
+    //LOGGED IN USER
+    path: 'training',
+    children: [
+     {
+       path: '', pathMatch: 'full', component: TrainingComponent
+     },
+     {
+      path: ':workoutId', component: WorkoutDetailsComponent
+     }
+    ]
   },
   {
     path: 'about', component: AboutComponent
@@ -31,8 +42,15 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
+    //ONLY OWNER
     path: 'create', component: CreateExerciseComponent
   },
+  {
+    path: '**', redirectTo: '/404'
+  },
+  {
+    path:'404', component: ErrorComponent
+  }
 ];
 
 @NgModule({
