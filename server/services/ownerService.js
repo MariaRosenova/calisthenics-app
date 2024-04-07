@@ -1,5 +1,5 @@
-const Exersice = require('../models/Exercise');
-const Workout = require('../models/Workout');
+// const Exersice = require('../models/Exercise');
+// const Workout = require('../models/Workout');
 
 
 exports.addExercise = async (exercise) => {
