@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about/about.component';
 import { CreateExerciseComponent } from './owner/create-exercise/create-exercise.component';
 import { WorkoutDetailsComponent } from './training/workout-details/workout-details.component';
 import { ErrorComponent } from './error/error.component';
+import { AuthActivate } from './guards/auth.activate';
 
 
 const routes: Routes = [
@@ -27,13 +28,11 @@ const routes: Routes = [
      {
       path: ':workoutId', component: WorkoutDetailsComponent
      }
-    ]
+    ],
+    canActivate: [AuthActivate]
   },
   {
     path: 'about', component: AboutComponent
-  },
-  {
-    path: 'create', component: CreateExerciseComponent
   },
   {
      path:'login', component: LoginComponent
@@ -42,7 +41,7 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },
   {
-    //ONLY OWNER
+    //ONLY OWNER, Add guard
     path: 'create', component: CreateExerciseComponent
   },
   {
