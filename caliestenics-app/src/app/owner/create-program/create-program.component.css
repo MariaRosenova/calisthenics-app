@@ -1,0 +1,11 @@
+.view {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.createProgram {
+    position: absolute;
+    top: 40vh;
+    width: 35vw;
+}
