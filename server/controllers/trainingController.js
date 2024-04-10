@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const Exercise = require('../models/Exercise');
 const trainingService = require('../services/trainingService');
-const cookieParser = require("cookie-parser");
 const authService = require("../services/AuthService");
 
 
@@ -9,15 +8,20 @@ router.get('/getWorkoutPlans', (req, res) => {
     res.status(200).json({'workoutPlans': [{0: 0}]}); // Assuming an empty array for workout plans
  });
 
+ router.post('/createProgram', (req, res) => {
+ const {day, goal, level} = req.body;
+  console.log( day, goal, level )
+ })
  
  router.post('/createExercise', async (req, res) => {
-    const exercise = req.body;
+   const {exersiceName, urlVideo} = req.body;
+
 
     try {
-        await Exercise.create(exercise);
-        res.status(200).json({Created: 'SUCCESSFULY'});
+        await Exercise.create({name: exersiceName, url: urlVideo});
+        res.status(200).json({message: 'SUCCESSFULY'});
     } catch (error) {
-     
+     res.status(422).json({message: 'Unsuccessfuly'})
     }
  });
 

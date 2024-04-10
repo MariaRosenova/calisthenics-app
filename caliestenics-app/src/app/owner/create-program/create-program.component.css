@@ -1,11 +1,105 @@
-.view {
+.create {
+    position: relative;
     width: 100vw;
     height: 100vh;
-    position: relative;
 }
 
-.createProgram {
+.create-form {
+    position: absolute;
+    top: 30vh;
+    left: 23.5%;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    width: 55vw;
+    height: 55vh;
+    color: white;
+}
+
+
+.program {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+    top: 4vh;
+    
+    right: 7vw;
+    background-color: gray;
+    height: 45vh;
+    width: 20vw;
+    border-radius: 7px;
+}
+
+input {
+    width: 20vw;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.goal-level {
+    position: absolute;
+    top: 15vh;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+
+.btn {
     position: absolute;
     top: 40vh;
-    width: 35vw;
+    left: 8.5vw;
+    background-color: #0C57FB;
+    border-color: #0C57FB;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 8vw;
+    font-weight: 400;
+    height: 7vh;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.goal, .level, .day, .exercise, .sets, .reps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    width: 5vw;
+}
+
+.btn-exercise {
+    position: absolute;
+    background-color: #0C57FB;
+    border-color: #0C57FB;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 8vw;
+    font-weight: 400;
+    height: 7vh;
+    font-size: 1.2em;
+    left: 6vw;
+    top: 36vh;
+    cursor: pointer;
+}
+
+.add-exercise {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    top: 7vh;
+    left: 1.5vw;
+    width: 20vw ;
+    height: 55vh;
+}
+
+.create-program-title {
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+    font-size: 1.5rem;
 }

@@ -16,18 +16,15 @@ export class CreateExerciseComponent {
   constructor(private apiService: ApiService, private router: Router) { }
 
   addNewExercise(form: NgForm) {
-    if (form.valid) {
+    if (form.invalid) {
       return;
     }
 
-    const exercise = form.value as Exercise;
+    const {name, exercise} = form.value
+    this.apiService.createExercise(name, exercise)
+      .subscribe((exercise) => {
+        this.router.navigate(['/createProgram']);
+      });
 
-    this.apiService.createExercise({ ...form.value })
-      .subscribe((exercise) => console.log(exercise));
-
-    this.router.navigate(['createProgram']);
-    // form.setValue({name: '', exercise: ''});
   }
-
-
 }

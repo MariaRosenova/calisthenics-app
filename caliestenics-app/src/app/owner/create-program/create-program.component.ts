@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { ExerciseForWorkout } from 'src/app/types/exerciseForWorkout';
 import { WorkoutPlans } from 'src/app/types/workout-plan';
 import { UserService } from 'src/app/user/user.service';
 
@@ -13,21 +14,40 @@ import { UserService } from 'src/app/user/user.service';
 })
 
 export class CreateProgramComponent {
+  exercises: ExerciseForWorkout[] = [];
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) { }
+
+  addExercise(exerciseName: string, reps: number, sets: number) {
+
+    const exercise: ExerciseForWorkout = { exerciseName, reps, sets };
+    this.exercises.push(exercise);
+ 
+  };
   
   createProgram(form: NgForm) {
+
     if (form.invalid) {
       return;
     }
 
-    console.log(form.value);
+    const {day, goal, level} = form.value;
+ 
+    this.apiService.createProgram(day, goal, level)
+  
   }
 
-  addExercise() {
+ 
+  
+  
 
-  }
+  
 
+ 
 }
   
    
+function addExercise() {
+  throw new Error('Function not implemented.');
+}
+

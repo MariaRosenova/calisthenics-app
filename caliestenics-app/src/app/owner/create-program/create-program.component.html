@@ -1,54 +1,67 @@
-<div class="view">
+<app-main-view class="view" />
+<div class="create">
   <h1>Create a New Program</h1>
 
-  <form class="createProgram" #createProgramForm="ngForm" (ngSubmit)="createProgram(createProgramForm)">
-    <fieldset>
-      <label for="goal">Goal:</label><br>
-      <input 
-      type="text"
-      id="goal" 
-      name="goal" 
-      placeholder="Fat Burning" 
-      ngModel
-      #goal="ngModel" 
-      required><br><br>
-
-      <label for="level">Level:</label><br>
-      <input 
-      type="text" 
-      id="level" 
-      name="level" 
-      ngModel
-      placeholder="Beginner"
-      #level="ngModel"
-      required><br><br>
-
-      <h2>Exercises</h2>
-      
-      <div>
-          <label for="day1">Day:</label>
-          <input type="text" id="day1" name="day1" placeholder="1" required  ngModel #day="ngModel"><br>
-
-          <label for="exerciseName">Exercise Name:</label>
-          <input type="text" id="exerciseName" name="exerciseName" placeholder="Push ups"  ngModel  #exerciseName="ngModel"><br>
-
-          <label for="sets">Sets:</label>
-          <input type="number" id="sets" name="sets"  ngModel  #sets="ngModel" required><br>
-
-          <label for="reps">Reps:</label>
-          <input type="number" id="reps" name="reps"  ngModel #reps="ngModel" required><br>
-
-          TODO: Option view
-          <label for="videoUrl">Video URL:</label>
-          <input type="url" id="videoUrl" name="videoUrl" ngModel #videoUrl="ngModel" required><br><br>
-
-         
+  <form class="createProgram" #createProgramForm="ngForm" (ngSubmit)="createProgram(createProgramForm)" class="create-form">
+      <div class="goal-level">
+      <div class="goal">
+        <label for="goal">Goal:</label><br>
+        <input 
+        type="text"
+        id="goal" 
+        name="goal" 
+        placeholder="Fat Burning" 
+        ngModel
+        #goal="ngModel" 
+        required><br><br>
       </div>
+      
+      <div class="level">
+        <label for="level">Level:</label><br>
+        <input 
+        type="text" 
+        id="level" 
+        name="level" 
+        ngModel
+        placeholder="Beginner"
+        #level="ngModel"
+        required><br><br>
+      </div>
+    </div>
 
-      <!-- Repeat the above code for exercises 2 to 5 -->
+    <h2 class="create-program-title">Create New Program</h2>
+    <div class="program">
+      
+      <div class="add-exercise">
+        <div class="day">
+          <label for="day">Day:</label>
+          <input type="text" id="day" name="day" placeholder="1" required  ngModel #day="ngModel"><br>
+        </div>
+         
+          <div class="exercise">
+            <label for="exerciseName">Exercise Name:</label>
+            <input type="text" id="exerciseName" name="exerciseName" placeholder="Push ups"  ngModel  #exerciseName="ngModel"><br>
+          </div>
+       
+          <!-- option view -->
+          <div class="sets">
+            <label for="sets">Sets:</label>
+            <input type="number" id="sets" name="sets"  ngModel  #sets="ngModel" required><br>
+  
+          </div>
+          <div class="reps">  
+            <label for="reps">Reps:</label>
+          <input type="number" id="reps" name="reps"  ngModel #reps="ngModel" required><br>
+          </div>
+          
+      </div>
+      
+          <button (click)="addExercise(exerciseName.value, sets.value, reps.value)" class="btn-exercise">Add exercise</button>
+      
+    </div>
 
-    </fieldset>
+   
 
-      <button type="submit">Create Program</button>
+      <button class="btn">Create Program</button>
   </form>
 </div>
