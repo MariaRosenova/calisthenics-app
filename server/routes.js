@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const trainingController = require('./controllers/trainingController');
+const authController = require('./controllers/trainingController');
 const ownerController = require('./controllers/ownerController');
 
 // router.get('/api/training/getWorkoutPlans', (req, res) => {
@@ -8,6 +9,8 @@ const ownerController = require('./controllers/ownerController');
  
  
 router.use('/training/', trainingController);
+
+router.use(authController);
 
 router.use(ownerController);
 

@@ -22,18 +22,18 @@ exports.login = async (loginData) => {
   const user = await User.findOne({ email: loginData.email });
 
   if (!user) {
-    throw new Error("Cannot find email or password");
+    throw new Error('Authentication failed');
   }
 
   const isValid = await bcrypt.compare(loginData.password, user.password);
   
   if (!isValid) {
-    throw new Error("Cannot find email or password");
+  throw new Error('Authentication failed');
   }
 
   const token = await generateToken(user);
 
-  return token;
+  return { token, email: user.email, username: user.username, _id: user._id };
 };
 
 
