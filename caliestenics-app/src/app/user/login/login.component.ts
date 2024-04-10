@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EMAIL_DOMAINS } from 'src/app/constants';
+import { UserService } from '../user.service';
 //import { emailValidator } from 'src/app/shared/utils/email-validator';
 
 
@@ -11,18 +13,17 @@ import { EMAIL_DOMAINS } from 'src/app/constants';
 })
 export class LoginComponent {
   domains = EMAIL_DOMAINS;
+  
+  constructor(private userService: UserService, private router: Router) {}
   login(form: NgForm) {
 
     if (form.invalid) {
       return;
-
-      console.log(form.value);
-      console.log('Invalid ', form.invalid);
     }
-    console.log('logged in')
-  
 
-    // this.userService.login();
-    // this.router.navigate(['/training']);
+    const {email, password} = form.value;
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['/home'])
+    })
 }
 }
