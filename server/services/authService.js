@@ -15,7 +15,8 @@ exports.register = async (userData) => {
 
    const token = await generateToken(createdUser);
 
-   return token;
+   return {token, email: user.email, username: user.username, _id: user._id };
+   //return token;
 }
 
 exports.login = async (loginData) => {
@@ -34,6 +35,7 @@ exports.login = async (loginData) => {
   const token = await generateToken(user);
 
   return { token, email: user.email, username: user.username, _id: user._id };
+  //return token;
 };
 
 
@@ -48,3 +50,8 @@ function generateToken(user) {
   return jwt.sign(payload, SECRET, {expiresIn: '2h'});
   
 };
+
+exports.getProfile = async (user) => {
+ const foundedUser = User.findOne({user: user});
+ return foundedUser;
+} 

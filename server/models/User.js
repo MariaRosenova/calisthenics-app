@@ -18,23 +18,26 @@ const userSchema = new mongoose.Schema({
         required: [true, 'The password is required'],
         minlength: [4, 'The password should be at least 4 characters long'],
     },
+    rePassword: {
+        type: String,
+        required: true,
+        minlength: 4,
+    }
 });
+
 
 userSchema.pre('save', async function(next) {
-    const hash = await bcrypt.hash(this.password, 12);
-    this.password = hash;
-
+    if (this.isModified('password') || this.isNew) {
+        if (this.password !== this.rePassword) {
+            throw new Error('Passwords do not match');
+        }
+        const hash = await bcrypt.hash(this.password, 12);
+        this.password = hash;
+        this.rePassword = hash; // Assigning the same hash to rePassword
+    }
     next();
 });
-
-userSchema.virtual('rePassword')
-    .set(function (value) {
-        if (value !== this.password) {
-            throw new MongooseError('Password Mismatch!')
-        }
-    });
-
-    
+ 
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

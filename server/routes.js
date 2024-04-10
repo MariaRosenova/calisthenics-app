@@ -10,7 +10,7 @@ const ownerController = require('./controllers/ownerController');
  
 router.use('/training/', trainingController);
 
-router.use(authController);
+router.use('/auth/', authController);
 
 router.use(ownerController);
 
