@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/api.service';
+import { Exercise } from 'src/app/types/exercise';
+
 
 
 @Component({
@@ -8,10 +12,21 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./create-exercise.component.css']
 })
 export class CreateExerciseComponent {
-  addNewExercise(form: NgForm) {
-    console.log(form.value);
 
-    form.setValue({name: '', exercise: ''});
+  constructor(private apiService: ApiService, private router: Router) { }
+
+  addNewExercise(form: NgForm) {
+    if (form.valid) {
+      return;
+    }
+
+    const exercise = form.value as Exercise;
+
+    this.apiService.createExercise({ ...form.value })
+      .subscribe((exercise) => console.log(exercise));
+
+    this.router.navigate(['createProgram']);
+    // form.setValue({name: '', exercise: ''});
   }
 
 
