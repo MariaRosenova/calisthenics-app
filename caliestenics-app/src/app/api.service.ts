@@ -10,15 +10,12 @@ import { Exercise } from "./types/exercise";
 })
 
 export class ApiService {
-    createProgram(programData: { goal: string; level: string; exercises: never[]; }) {
-      throw new Error('Method not implemented.');
-    }
+   
     constructor(private http: HttpClient) {}
 
     getWorkoutPlans() {
         const { apiUrl } = environment;
         return this.http.get<WorkoutPlans[]>(`${apiUrl}/training/getWorkoutPlans`);
-       //{PersonalProgram: [{}, {}, {}]},
     }
 
     createWorkout(programData: WorkoutPlans) {
@@ -28,10 +25,22 @@ export class ApiService {
 
     
 
-    createExercise(exercise: Exercise) {
-        console.log("Already in the service", exercise);
-        
+    createExercise(exersiceName:string, urlVideo:string) {
+       console.log(exersiceName, urlVideo);
+       
         const { apiUrl } = environment;
-        return this.http.post<Exercise>(`${apiUrl}/training/createExercise`, exercise);
+        return this.http.post<Exercise>(`${apiUrl}/training/createExercise`, {exersiceName, urlVideo});
+    }
+
+    createProgram(
+        day: number,
+        goal: string,
+        level: string,
+        // exercises: Object
+    ) {
+       console.log(day, goal, level);
+       
+        const { apiUrl } = environment;
+        return this.http.post(`${apiUrl}/training/createProgram`, {day, goal, level});
     }
 }
