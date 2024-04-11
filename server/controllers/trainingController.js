@@ -8,11 +8,9 @@ router.get('/getWorkoutPlans', (req, res) => {
     res.status(200).json({'workoutPlans': [{0: 0}]}); // Assuming an empty array for workout plans
  });
 
- router.post('/createProgram', (req, res) => {
- const {day, goal, level} = req.body;
-  console.log( day, goal, level )
- })
  
+
+
  router.post('/createExercise', async (req, res) => {
    const {exersiceName, urlVideo} = req.body;
 
@@ -34,10 +32,18 @@ router.get('/getWorkoutPlans', (req, res) => {
     res.status(404).json({message: 'User not found'})
   }
  })
-
-
-
  
+ router.post('/createProgram', (req, res) => {
+  try {
+    const {goal, level, exercises} = req.body;
+    console.log(goal, level, exercises)
+    res.status(200).json({message: { goal, level, exercises}})
+  } catch(err) {
+    res.status(404).json({message: 'nope'})
+    console.log('nope')
+  }
+ })
+
  router.post('/login', async (req, res) => {
     const loginData = req.body;
 

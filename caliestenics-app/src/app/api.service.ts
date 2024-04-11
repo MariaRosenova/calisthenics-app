@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { environment } from "./environments/environment";
 import { WorkoutPlans } from "./types/workout-plan";
 import { Exercise } from "./types/exercise";
+import { ExerciseForWorkout } from "./types/exerciseForWorkout";
 
 
 @Injectable({
@@ -13,18 +14,22 @@ export class ApiService {
    
     constructor(private http: HttpClient) {}
 
+    createProgram(
+        goal : string,
+        level : string,
+        exercises: any) {
+        const { apiUrl } = environment;
+
+        console.log("In the service", goal, level, exercises);
+        return this.http.post<any>(`${apiUrl}/training/createProgram`, {goal, level, exercises});//
+    }
+
     getWorkoutPlans() {
         const { apiUrl } = environment;
         return this.http.get<WorkoutPlans[]>(`${apiUrl}/training/getWorkoutPlans`);
     }
 
-    createWorkout(programData: WorkoutPlans) {
-        const { apiUrl } = environment;
-        return this.http.post<WorkoutPlans>(`${apiUrl}/training/createWorkoutPlans`, programData);
-    }
-
-    
-
+  
     createExercise(exersiceName:string, urlVideo:string) {
        console.log(exersiceName, urlVideo);
        
@@ -32,15 +37,6 @@ export class ApiService {
         return this.http.post<Exercise>(`${apiUrl}/training/createExercise`, {exersiceName, urlVideo});
     }
 
-    createProgram(
-        day: number,
-        goal: string,
-        level: string,
-        // exercises: Object
-    ) {
-       console.log(day, goal, level);
-       
-        const { apiUrl } = environment;
-        return this.http.post(`${apiUrl}/training/createProgram`, {day, goal, level});
-    }
+  
+  
 }

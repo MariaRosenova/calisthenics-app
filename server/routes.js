@@ -1,18 +1,10 @@
 const router = require('express').Router();
 const trainingController = require('./controllers/trainingController');
-const authController = require('./controllers/trainingController');
 const ownerController = require('./controllers/ownerController');
 
-// router.get('/api/training/getWorkoutPlans', (req, res) => {
-//     res.status(200).json({'workoutPlans': []}); // Assuming an empty array for workout plans
-//  });
- 
- 
 router.use('/training/', trainingController);
 
-router.use('/auth/', authController);
-
-router.use(ownerController);
+// router.use('/owner/', ownerController);
 
 router.use('*', (req, res) => {
     res.status(404)
