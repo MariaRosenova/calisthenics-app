@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AppInterceptor } from './app.interceptor';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 
 
@@ -23,9 +24,11 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     ErrorComponent,
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     CoreModule,
     FontAwesomeModule,
@@ -36,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutModule,
     TrainingModule,
     OwnerModule,
-    FormsModule
+  
   ],
   providers: [AppInterceptor],
   bootstrap: [AppComponent]

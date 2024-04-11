@@ -19,6 +19,8 @@ export class AppInterceptor implements HttpInterceptor {
     request: HttpRequest<any>, 
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    console.log(request);
+    
     if (request.url.startsWith(this.API)) {
       request = request.clone({
         url: request.url.replace(this.API, apiUrl),

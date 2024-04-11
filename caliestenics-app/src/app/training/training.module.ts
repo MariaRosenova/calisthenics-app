@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TrainingComponent } from './training/training.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProgramComponent } from './program/program.component';
-import { WorkoutDetailsComponent } from './workout-details/workout-details.component';
+import { WorkoutDetailsComponent } from './workout-details/workoutDetailsComponent';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +17,7 @@ import { WorkoutDetailsComponent } from './workout-details/workout-details.compo
   imports: [
     CommonModule,
     SharedModule,
+    RouterModule,
     
   ],
   exports: [

@@ -1,1 +1,16 @@
-<p>workout-details works!</p>
+<div class="workout">
+    <div class="workout-details">
+        <h1>Workout Details</h1>
+      
+        <div  *ngFor="let day of programs">
+          <h2>Day {{ day }}</h2>
+          <div >
+            <div  *ngFor="let exercise of day.exercises">
+              <h3>{{ exercise.exerciseName }}</h3>
+              <p>Reps: {{ exercise.reps }}</p>
+              <p>Sets: {{ exercise.sets }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

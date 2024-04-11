@@ -6,9 +6,10 @@ import { HomeComponent } from './home/home/home.component';
 import { TrainingComponent } from './training/training/training.component';
 import { AboutComponent } from './about/about/about.component';
 import { CreateExerciseComponent } from './owner/create-exercise/create-exercise.component';
-import { WorkoutDetailsComponent } from './training/workout-details/workout-details.component';
+import { WorkoutDetailsComponent } from './training/workout-details/workoutDetailsComponent';
 import { ErrorComponent } from './error/error.component';
 import { AuthActivate } from './guards/auth.activate';
+import { CreateProgramComponent } from './owner/create-program/create-program.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,7 @@ const routes: Routes = [
       path: ':workoutId', component: WorkoutDetailsComponent
      }
     ],
-    canActivate: [AuthActivate]
+      canActivate: [AuthActivate]
   },
   {
     path: 'about', component: AboutComponent
@@ -39,17 +40,18 @@ const routes: Routes = [
   },
   { 
     path: 'register', component: RegisterComponent
-  },
+  }, 
   {
     //ONLY OWNER, Add guard
-    path: 'create', component: CreateExerciseComponent
+    path: 'createProgram', component: CreateProgramComponent
   },
   {
-    path: '**', redirectTo: '/404'
+    path: 'createExercise', component: CreateExerciseComponent
   },
-  {
-    path:'404', component: ErrorComponent
-  }
+  // {
+  //   path: '**', redirectTo: '/404', component: ErrorComponent
+  // },
+
 ];
 
 @NgModule({

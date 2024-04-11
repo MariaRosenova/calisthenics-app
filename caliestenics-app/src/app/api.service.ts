@@ -40,6 +40,9 @@ export class ApiService {
         return this.http.post<Exercise>(`${apiUrl}/training/createExercise`, {exersiceName, urlVideo});
     }
 
-  
+    getWorkout(id: string) {
+        const { apiUrl } = environment;
+        return this.http.post<WorkoutPlans[]>(`${apiUrl}/training/getWorkout`, {id});
+    }
   
 }

@@ -2,30 +2,15 @@ const router = require('express').Router();
 const ownerService = require('../services/ownerService');
 
 
-router.post('/createExercise', async (req, res) => {
-
-    const exercise = req.body;
-    try{
-
-        const createdExercise = await ownerService.addExercise(exercise);
-        console.log('Successfuly added a new exercise to DB', createdExercise);
-    } catch(err) {
-
-        console.log(err);
-    }
-
-});
-
-router.post('/createWorkout', async (req, res) => {
-    const workout = req.body;
-
-    try {
-        const createdWorkout = await ownerService.createWorkout(workout);
-        console.log('Successfuly created a workout', createdWorkout);
-    } catch(err) {
-        console.log(err);
-    }
-});
-
+router.post('/createProgram', (req, res) => {
+    const { goal, level, exercises } = req.body;
+  
+    // You can log the data to verify that you're receiving it correctly
+    console.log('Received data:', goal, level, exercises);
+  
+    // Process the data as needed
+    // For now, let's just echo it back in the response
+    res.status(400).json({ goal, level, exercises });
+   });
 
 module.exports = router;

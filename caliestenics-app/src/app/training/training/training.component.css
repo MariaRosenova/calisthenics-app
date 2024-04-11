@@ -52,6 +52,11 @@
     width: fit-content;
     top: 27vh;
     left: 10%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    
 }
 
 /* TODO: make flexible the others program views */
@@ -74,13 +79,19 @@
     font-weight: 100;
     color: black;
     z-index: 1;
+    
 }
 
 .guides .guide-program {
     position: absolute;
     top: 78vh;
     left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    color:black;
 }
+
 
 .workout-libraly{
     position: relative;
@@ -88,6 +99,9 @@
     height: 70vh;
     width: 100vw;
     z-index: -4;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
 }
 
 .libraly-title {

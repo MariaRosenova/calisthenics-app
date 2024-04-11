@@ -2,34 +2,28 @@ const router = require('express').Router();
 const Exercise = require('../models/Exercise');
 const authService = require("../services/AuthService");
 const Workout = require("../models/Workout");
-const mongoose = require('mongoose');
+const trainingService = require('../services/trainingService');
+
+router.get('/getWorkout', async (req, res) => {
+  const workoutId = req.body;
+  const programs = await trainingService.getWorkout(workoutId);
+  return programs;
+});
 
 
 router.get('/getWorkoutGoalPrograms', async (req, res) => {
   try {
     const userGoal = req.query.goal; 
-    const programs = await getWorkoutGoal(userGoal);
-
+    const programs = await trainingService.getWorkoutGoal(userGoal);
+    console.log(programs)
+    res.json({programs})
+    return programs;
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-async function getWorkoutGoal(userGoal) {
-  try {
-    const programs = await Workout.find({ goal: userGoal });
-
-    const programArrays = programs.map(program => program.program);
-
-    const programObjects = programArrays.flat();
-
-    return programObjects;
-    
-  } catch (error) {
-    throw error;
-  }
-}
 
 router.post('/createExercise', async (req, res) => {
   const { exersiceName, urlVideo } = req.body;
