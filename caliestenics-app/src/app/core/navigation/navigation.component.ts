@@ -22,9 +22,12 @@ export class NavigationComponent {
     return this.userService.isLogged;
   }
 
+
   logout() {
-    this.userService.logout();
-    this.router.navigate(['/home']);
+    this.userService.logout().subscribe({
+      next: () =>  this.router.navigate(['/home'])
+    });
+ 
   }
 
 }
