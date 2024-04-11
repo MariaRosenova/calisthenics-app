@@ -21,7 +21,7 @@ export class ApiService {
         const { apiUrl } = environment;
 
         console.log("In the service", goal, level, exercises);
-        return this.http.post<any>(`${apiUrl}/training/createProgram`, {goal, level, exercises});//
+        return this.http.post<WorkoutPlans[]>(`${apiUrl}/training/createProgram`, {goal, level, exercises});
     }
 
     getWorkoutPlans() {
