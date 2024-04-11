@@ -1,4 +1,4 @@
-.register {
+.create {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -29,7 +29,7 @@
 .input-fields {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 4vh;
 }
 
 .name-exersice, .exercise {
@@ -39,12 +39,13 @@
 }
 
 .create-form h2 {
-    margin-top: 5vh;
+    margin-top: 2vh;
+    margin-left: 2.5vw ;
     font-size: 2em;
 }
 
 .btn {
-    margin-left: 10vw;
+    position: absolute;
     background-color: #0C57FB;
     border-color: #0C57FB;
     border-radius: 5px;
@@ -54,6 +55,8 @@
     font-weight: 400;
     height: 7vh;
     font-size: 1.2em;
+    top: 37vh;
+    left: 9.4vw;
 }
 
 .view {
@@ -68,6 +71,21 @@
     text-decoration: none;
 }
 
-.create-form p {
-    margin-bottom: 30vh;
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.form-group {
+    position: absolute;
+    top: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+label {
+    margin-left: 2vw ;
 }
