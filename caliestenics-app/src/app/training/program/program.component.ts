@@ -7,5 +7,8 @@ import { ProgramItem } from 'src/app/types/programItem';
   styleUrls: ['./program.component.css']
 })
 export class ProgramComponent {
+
   @Input('program') program = {} as ProgramItem;
+  @Input()_id!: string;
+  
 }

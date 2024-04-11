@@ -3,33 +3,37 @@
     <h1 class="title">Workouts & Programs</h1>
     <p class="subtitle">Workouts, Programs and Technique Guides that just work</p>
 </div>
-
 <div class="programs">
     <div class="personal-programs">
         <h1 class="personal-title ">Your personal programs</h1>
 
-        <ul class="program-components" *ngFor="let program of programs">
-            <app-program [program]="program" />
-        </ul>
+        <ul class="program-components">
+            <li *ngFor="let program of goalPlan; let i = index" (click)="navigateToWorkout(program._id)">
+                <app-program [program]="{ title: program.title, description: program.description, imgUrl: program.imgUrl }" ></app-program>
+            </li>
+          </ul>
     </div>
 
-
+<!-- 
     <div class="techniques">
         <h1 class="tech-title">Technique Guides</h1>
         <div class="guides">
-            <ul class="guide-program" *ngFor="let program of programs">
-                <app-program [program]="program" />
-            </ul>
+                 <ul class="guide-program">
+                    <li *ngFor="let tech of techniques">
+                        <app-program class="tech" [program]="tech"></app-program>
+                    </li>
+               
+            </ul> 
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="workout-libraly">
+<!-- <div class="workout-libraly">
     <h1 class="libraly-title">Workouts</h1>
     <p class="libraly-subtitle">based on your needs and fitness level</p>
     <div class="libraly">
-        <ul class="libraly-videos" *ngFor="let program of programs">
+      <ul class="libraly-videos" *ngFor="let program of programs">
             <app-program [program]="program" />
-        </ul>
+        </ul> 
     </div>
-</div>
+</div> -->
