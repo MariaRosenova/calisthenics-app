@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { ExerciseForWorkout } from 'src/app/types/exerciseForWorkout';
@@ -16,13 +16,16 @@ import { UserService } from 'src/app/user/user.service';
 export class CreateProgramComponent {
   exercises: ExerciseForWorkout[] = [];
 
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router,  private elementRef: ElementRef) { }
 
-  addExercise(exerciseName: string, reps: number, sets: number) {
+  addExercise(day: number, exerciseName: string, reps: number, sets: number) {
 
-    const exercise: ExerciseForWorkout = { exerciseName, reps, sets };
+    const exercise: ExerciseForWorkout = { day, exerciseName, reps, sets };
     this.exercises.push(exercise);
- 
+    
+    (this.elementRef.nativeElement.querySelector('#exerciseName') as HTMLInputElement).value = '';
+    (this.elementRef.nativeElement.querySelector('#reps') as HTMLInputElement).value = '';
+    (this.elementRef.nativeElement.querySelector('#sets') as HTMLInputElement).value = '';
   };
   
   createProgram(form: NgForm) {
