@@ -16,6 +16,7 @@ import { UserService } from 'src/app/user/user.service';
 export class CreateProgramComponent {
   exercises: ExerciseForWorkout[] = [];
 
+
   constructor(private apiService: ApiService, private router: Router,  private elementRef: ElementRef) { }
 
   addExercise(day: number, exerciseName: string, reps: number, sets: number) {
@@ -34,23 +35,16 @@ export class CreateProgramComponent {
       return;
     }
 
-    const {day, goal, level} = form.value;
- 
-    this.apiService.createProgram(day, goal, level)
+    const {goal, level} = form.value;
+
+    this.apiService.createProgram(goal, level, this.exercises).subscribe((program) => {
+      this.router.navigate(['/training']);
+    });
+
   
   }
 
- 
-  
-  
 
-  
-
- 
 }
   
-   
-function addExercise() {
-  throw new Error('Function not implemented.');
-}
-
+ 
