@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { TrainingComponent } from './training/training.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProgramComponent } from './program/program.component';
-import { WorkoutDetailsComponent } from './workout-details/workoutDetailsComponent';
+import { WorkoutDetailsComponent } from './workout/workoutDetailsComponent';
 import { RouterModule } from '@angular/router';
 import { WorkoutDayComponent } from './workout-day/workout-day.component';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 
 
@@ -14,7 +15,8 @@ import { WorkoutDayComponent } from './workout-day/workout-day.component';
     TrainingComponent,
     ProgramComponent,
     WorkoutDetailsComponent,
-    WorkoutDayComponent
+    WorkoutDayComponent,
+    ExerciseComponent
   ],
   imports: [
     CommonModule,

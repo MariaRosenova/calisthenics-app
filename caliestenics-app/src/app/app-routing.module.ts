@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home/home.component';
 import { TrainingComponent } from './training/training/training.component';
 import { AboutComponent } from './about/about/about.component';
 import { CreateExerciseComponent } from './owner/create-exercise/create-exercise.component';
-import { WorkoutDetailsComponent } from './training/workout-details/workoutDetailsComponent';
+import { WorkoutDetailsComponent } from './training/workout/workoutDetailsComponent';
 import { ErrorComponent } from './error/error.component';
 import { AuthActivate } from './guards/auth.activate';
 import { CreateProgramComponent } from './owner/create-program/create-program.component';

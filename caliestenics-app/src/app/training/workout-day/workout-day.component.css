@@ -1,0 +1,12 @@
+.day {
+    position: absolute;
+    top: 50vh;
+    left: 15vw;
+    width: 70vw;
+    /* height: fit-content; */
+    height: 30vh;
+    background-color: white;
+    border: 1px solid #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+}
