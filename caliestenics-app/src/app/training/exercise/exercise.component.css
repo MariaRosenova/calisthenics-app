@@ -1,0 +1,37 @@
+.exercise {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2.5vw;
+    align-items: center;
+    padding: 2% 0 0 0;
+}
+
+.exercise-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.video img {
+    border-radius: 5px;
+    max-width: 10em;
+    max-height: 9rem;
+    margin-left: 1.5vw;
+}
+
+.exercise-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.sets-reps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+hr {
+    height: 1rem;
+}
