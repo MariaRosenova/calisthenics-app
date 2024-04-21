@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ExerciseForWorkout } from 'src/app/types/exerciseForWorkout';
 
 @Component({
   selector: 'app-workout-day',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./workout-day.component.css']
 })
 export class WorkoutDayComponent {
-
+  //day -> [{},{},{}]
+@Input('exercise') exercise = {} as ExerciseForWorkout[];
 }

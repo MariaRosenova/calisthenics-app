@@ -9,6 +9,6 @@ import { ProgramItem } from 'src/app/types/programItem';
 export class ProgramComponent {
 
   @Input('program') program = {} as ProgramItem;
-  @Input()_id!: string;
+
   
 }

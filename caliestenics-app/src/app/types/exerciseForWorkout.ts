@@ -1,5 +1,6 @@
 export interface ExerciseForWorkout {
-    day: number,
+    day?: number,
+    videoExercise?: string,
     exerciseName: string,
     reps?: number,
     sets?: number
