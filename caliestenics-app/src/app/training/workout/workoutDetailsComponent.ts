@@ -22,4 +22,16 @@ export class WorkoutDetailsComponent{
   }
 
 
+
+  // workoutDays: { dayNumber: number, exercises: ExerciseForWorkout[] }[] = [
+  //   {
+  //     dayNumber: 1,
+  //     exercises: [/* Array of ExerciseForWorkout objects for day 1 */]
+  //   },
+  //   {
+  //     dayNumber: 2,
+  //     exercises: [/* Array of ExerciseForWorkout objects for day 2 */]
+  //   },
+  //   // Add more days as needed
+  // ];
 }

@@ -1,9 +1,10 @@
 <div class="workout">
-    <div class="workout-details">
-        <h1>Workout Details</h1>
-      
-        <!-- <div *ngFor="let day of programs"> -->
-          <app-workout-day [day]="day"/>
-        <!-- </div> -->
-      </div>
+  <div class="workout-details">
+    <h1>Workout Details</h1>
+    <ul>
+      <li *ngFor="let day of programs">
+        <app-workout-day [day]="day" />
+      </li>
+    </ul>
+  </div>
 </div>

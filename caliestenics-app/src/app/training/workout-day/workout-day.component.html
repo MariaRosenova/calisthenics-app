@@ -1,7 +1,8 @@
 <div class="day">
-    <!-- let exercise of exercises -->
-    <ul > 
-        <app-exercise [exercise]="exercise"/>
-        <hr/>
+    <ul>
+        <li *ngFor="let exercise of day">
+            <app-exercise [exercise]="exercise" />
+            <hr />
+        </li>
     </ul>
 </div>

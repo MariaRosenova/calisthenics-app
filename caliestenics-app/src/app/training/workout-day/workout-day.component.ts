@@ -7,6 +7,7 @@ import { ExerciseForWorkout } from 'src/app/types/exerciseForWorkout';
   styleUrls: ['./workout-day.component.css']
 })
 export class WorkoutDayComponent {
-  //day -> [{},{},{}]
-@Input('exercise') exercise = {} as ExerciseForWorkout[];
+
+@Input() day: { dayNumber: number, exercises: ExerciseForWorkout[]} | undefined;
+
 }
